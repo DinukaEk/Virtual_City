@@ -79,7 +79,6 @@ Virtual_City/
 ✅ Contributing
 
 Your input is welcome!
-
 1. Fork this repo
 2. Create a feature branch: git checkout -b feature/YourIdea
 3. Commit: git commit -m "Implement new feature"
@@ -88,4 +87,5 @@ Your input is welcome!
 
 
 📄 License
+
 Distributed under the MIT License—see LICENSE for details.
