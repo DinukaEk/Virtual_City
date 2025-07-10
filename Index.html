@@ -8,72 +8,112 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+    <div class="city-container" id="cityContainer">
+        <!-- Control Panel -->
+        <div class="controls">
+            <h3>City Controls</h3>
+            <button onclick="toggleDayNight()">🌙 Night Mode</button>
+            <button onclick="addTraffic()">🚗 More Traffic</button>
+            <button onclick="resetCity()">🔄 Reset</button>
+        </div>
 
-    <div class="city-container">
-        
         <!-- Roads -->
-        <div class="road3"><img src="./Resources/road/Asset 312@2x.png" alt="" srcset="" height="70%" width="70%"></div>
-        <div class="road1"><img src="./Resources/road/Asset 304@2x.png" alt="" srcset="" height="70%" width="70%"></div>
-        <div class="road2"><img src="./Resources/road/Asset 311@2x.png" alt="" srcset="" height="40%" width="40%"></div>
-
+        <div class="road road3">
+            <img src="./Resources/road/Asset 312@2x.png" alt="Road" height="70%" width="70%">
+        </div>
+        <div class="road road1">
+            <img src="./Resources/road/Asset 304@2x.png" alt="Road" height="70%" width="70%">
+        </div>
+        <div class="road road2">
+            <img src="./Resources/road/Asset 311@2x.png" alt="Road" height="40%" width="40%">
+        </div>
 
         <!-- Others -->
-        <div class="other1"><img src="./Resources/others/Asset 309@2x.png" alt="" srcset="" height="20%" width="20%"></div>
-        
+        <div class="other1">
+            <img src="./Resources/others/Asset 309@2x.png" alt="Other" height="20%" width="20%">
+        </div>
         
         <!-- Vehicles Road 1 -->
-        <div class="car6"><img src="./Resources/vehicles/Asset 302@2x.png" alt="" srcset="" height="21%" width="21%"></div>
-        <div class="car4"><img src="./Resources/vehicles/Asset 300@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        <div class="car5"><img src="./Resources/vehicles/Asset 301@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-
-
-
-        <!---- Bottom Right ---->
-
-        <!-- Plants -->
-        <div class="plant1-br1"><img src="./Resources/plants/Asset 308@2x.png" alt="" srcset="" height="42%" width="42%"></div>
-        <div class="plant1-br2"><img src="./Resources/plants/Asset 308@2x.png" alt="" srcset="" height="52.7%" width="52.7%"></div>
-        <div class="plant1-br3"><img src="./Resources/plants/Asset 308@2x.png" alt="" srcset="" height="71.8%" width="71.8%"></div>
-
-        <div class="plant2-br3"><img src="./Resources/plants/Asset 284@2x.png" alt="" srcset="" height="20%" width="20%"></div>
-        <div class="plant2-br2"><img src="./Resources/plants/Asset 284@2x.png" alt="" srcset="" height="20%" width="20%"></div>
-        <div class="plant2-br1"><img src="./Resources/plants/Asset 284@2x.png" alt="" srcset="" height="20%" width="20%"></div>
-        
-
-
-        <!-- Buildings -->
-        <div class="building-br1" data-tooltip="building-br1" data-pop-up="building-br1 Pop-up"><img src="./Resources/house/Asset 277@2x.png" alt="" srcset="" height="20%" width="20%"></div>
-        <div class="building-br2" data-tooltip="building-br2" data-pop-up="building-br2 Pop-up"><img src="./Resources/house/Asset 277@2x.png" alt="" srcset="" height="22%" width="22%"></div>
-        <div class="building-br3" data-tooltip="building-br3" data-pop-up="building-br3 Pop-up"><img src="./Resources/house/Asset 277@2x.png" alt="" srcset="" height="26%" width="26%"></div>
-        
-
-
-
-
-
-        <!----------------------->
+        <div class="vehicle car6" data-tooltip="Moving Van">
+            <img src="./Resources/vehicles/Asset 302@2x.png" alt="Vehicle" height="21%" width="21%">
+        </div>
+        <div class="vehicle car4" data-tooltip="Compact Car">
+            <img src="./Resources/vehicles/Asset 300@2x.png" alt="Vehicle" height="17%" width="17%">
+        </div>
+        <div class="vehicle car5" data-tooltip="Sports Car">
+            <img src="./Resources/vehicles/Asset 301@2x.png" alt="Vehicle" height="17%" width="17%">
+        </div>
 
         <!-- Vehicles Road 2 -->
-        <div class="car3"><img src="./Resources/vehicles/Asset 298@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        <div class="car1"><img src="./Resources/vehicles/Asset 299@2x.png" alt="" srcset="" height="15%" width="15%"></div>
-        <div class="car2"><img src="./Resources/vehicles/Asset 297@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        
+        <div class="vehicle car3" data-tooltip="Delivery Truck">
+            <img src="./Resources/vehicles/Asset 298@2x.png" alt="Vehicle" height="17%" width="17%">
+        </div>
+        <div class="vehicle car1" data-tooltip="Family Car">
+            <img src="./Resources/vehicles/Asset 299@2x.png" alt="Vehicle" height="15%" width="15%">
+        </div>
+        <div class="vehicle car2" data-tooltip="City Bus">
+            <img src="./Resources/vehicles/Asset 297@2x.png" alt="Vehicle" height="17%" width="17%">
+        </div>
 
+        <!-- Plants Bottom Right -->
+        <div class="plant plant1-br1" data-tooltip="Oak Tree">
+            <img src="./Resources/plants/Asset 308@2x.png" alt="Plant" height="42%" width="42%">
+        </div>
+        <div class="plant plant1-br2" data-tooltip="Maple Tree">
+            <img src="./Resources/plants/Asset 308@2x.png" alt="Plant" height="52.7%" width="52.7%">
+        </div>
+        <div class="plant plant1-br3" data-tooltip="Pine Tree">
+            <img src="./Resources/plants/Asset 308@2x.png" alt="Plant" height="71.8%" width="71.8%">
+        </div>
+        <div class="plant plant2-br3" data-tooltip="Rose Bush">
+            <img src="./Resources/plants/Asset 284@2x.png" alt="Plant" height="20%" width="20%">
+        </div>
+        <div class="plant plant2-br2" data-tooltip="Flower Garden">
+            <img src="./Resources/plants/Asset 284@2x.png" alt="Plant" height="20%" width="20%">
+        </div>
+        <div class="plant plant2-br1" data-tooltip="Herb Garden">
+            <img src="./Resources/plants/Asset 284@2x.png" alt="Plant" height="20%" width="20%">
+        </div>
+
+        <!-- Buildings Bottom Right -->
+        <div class="building building-br1" data-tooltip="Residential Complex" data-info="A modern residential building with 15 apartments. Home to 45 residents.">
+            <img src="./Resources/house/Asset 277@2x.png" alt="Building" height="20%" width="20%">
+        </div>
+        <div class="building building-br2" data-tooltip="Office Tower" data-info="A 20-story office building housing various tech companies and startups.">
+            <img src="./Resources/house/Asset 277@2x.png" alt="Building" height="22%" width="22%">
+        </div>
+        <div class="building building-br3" data-tooltip="Shopping Mall" data-info="The city's main shopping center with over 100 stores and restaurants.">
+            <img src="./Resources/house/Asset 277@2x.png" alt="Building" height="26%" width="26%">
+        </div>
 
         <!-- Buildings Bottom Left -->
-        <div class="building-bl1" data-tooltip="building-bl1" data-pop-up="building-bl1 Pop-up"><img src="./Resources/house/Asset 276@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        <div class="building-bl2" data-tooltip="building-bl2" data-pop-up="building-bl2 Pop-up"><img src="./Resources/house/Asset 276@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        <div class="building-bl3" data-tooltip="building-bl3" data-pop-up="building-bl3 Pop-up"><img src="./Resources/house/Asset 276@2x.png" alt="" srcset="" height="17%" width="17%"></div>
-        
-      
-        <!------------------------>
-        
-      </div>
-    
+        <div class="building building-bl1" data-tooltip="City Hall" data-info="The administrative center of our virtual city. All civic services are managed here.">
+            <img src="./Resources/house/Asset 276@2x.png" alt="Building" height="17%" width="17%">
+        </div>
+        <div class="building building-bl2" data-tooltip="Hospital" data-info="Central Medical Center - providing healthcare services to all city residents.">
+            <img src="./Resources/house/Asset 276@2x.png" alt="Building" height="17%" width="17%">
+        </div>
+        <div class="building building-bl3" data-tooltip="School" data-info="Virtual City Elementary School - educating the next generation of digital citizens.">
+            <img src="./Resources/house/Asset 276@2x.png" alt="Building" height="17%" width="17%">
+        </div>
 
+        <!-- Clouds -->
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
 
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
 
-
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Building Information</h2>
+            <p id="modalContent">Details about the selected building will appear here.</p>
+        </div>
+    </div>
 
     <script src="Main.js"></script>
 </body>
