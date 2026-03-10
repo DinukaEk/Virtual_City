@@ -2,6 +2,11 @@
 
 An interactive web application simulating a city environment. Users can explore various buildings, locations, and routes within a virtual cityscape—all in-browser with engaging visuals and navigation functionality.
 
+🔗 **Live Demo (GitHub Pages)**  
+[https://dinukaek.github.io/Virtual_City/](https://dinukaek.github.io/Virtual_City/)
+
+---
+
 ## 🚀 Key Features
 
 - 🏢 **City Navigation**  
